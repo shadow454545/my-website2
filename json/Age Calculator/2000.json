@@ -1,0 +1,70 @@
+{
+  "celebrities": [
+    {
+      "name": "Zendaya",
+      "profession": "Actress, Singer",
+      "birthdate": "2000-09-01",
+      "country": "United States",
+      "knownFor": "Euphoria, Spider-Man films"
+    },
+    {
+      "name": "Billie Eilish",
+      "profession": "Singer-Songwriter",
+      "birthdate": "2000-12-18",
+      "country": "United States",
+      "knownFor": "Bad Guy, Ocean Eyes"
+    },
+    {
+      "name": "Tom Holland",
+      "profession": "Actor",
+      "birthdate": "1996-06-01",
+      "country": "United Kingdom",
+      "knownFor": "Spider-Man films, Uncharted"
+    },
+    {
+      "name": "Yara Shahidi",
+      "profession": "Actress, Model",
+      "birthdate": "2000-02-10",
+      "country": "United States",
+      "knownFor": "Black-ish, Grown-ish"
+    }
+  ],
+  "generation": {
+    "name": "Generation Z",
+    "startYear": 1997,
+    "endYear": 2009,
+    "description": "Digital natives who have never known a world without the internet and social media.",
+    "definingEvents":[
+      {
+        "event": "Social Media Boom",
+        "year": "2000s - Present",
+        "icon": "📱",
+        "details": "Platforms like Facebook (2004), Twitter (2006), Instagram (2010), Snapchat (2011), and TikTok (2016) revolutionized how people communicate, consume content, and form communities."
+      },
+      {
+        "event": "Great Recession",
+        "year": "2008 - 2009",
+        "icon": "💰",
+        "details": "The global financial crisis, triggered by the U.S. housing bubble collapse, led to massive unemployment and economic instability worldwide."
+      },
+      {
+        "event": "Rise in School Shootings",
+        "year": "1999 - Present",
+        "icon": "🎓",
+        "details": "Notable incidents like the Columbine High School shooting (1999), Sandy Hook (2012), and Parkland (2018) brought national attention to gun violence in schools."
+      },
+      {
+        "event": "COVID-19 Pandemic",
+        "year": "2020 - 2022",
+        "icon": "🦠",
+        "details": "The COVID-19 pandemic disrupted education, jobs, and social interactions, forcing schools and workplaces to shift online."
+      },
+      {
+        "event": "Rise of AI and Automation",
+        "year": "2010s - Present",
+        "icon": "🤖",
+        "details": "Advancements in artificial intelligence, automation, and robotics have begun transforming the job market, education, and everyday life."
+      }
+    ]
+  }
+}

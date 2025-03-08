@@ -1,0 +1,274 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3498db; /* Blue color for buttons */
+    --secondary-color: #2980b9;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* Modern typography */
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    padding: 0 20px;
+}
+
+/* Layout */
+header, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Form Styles */
+.calculator-container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.calculate-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.calculate-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Results Section */
+.results-container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+    display: none; /* Initially hidden, will be shown via JavaScript */
+}
+
+.result-lines {
+    margin-bottom: 30px;
+}
+
+.result-line {
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.result-line .icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.result-line span:not(.icon) {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+#today-age {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.additional-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.celebrities-container, .generation-container {
+    flex: 1 1 calc(50% - 15px);
+    min-width: 300px;
+}
+
+.celebrity-item, .generation-item {
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.celebrity-item h4 {
+    margin-bottom: 5px;
+}
+
+/* Defining Events Styles */
+.defining-events {
+    margin-top: 15px;
+}
+
+.event-item {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.event-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.event-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.event-header h6 {
+    font-size: 1.1rem;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.event-year {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.event-details {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.event-impact {
+    font-style: italic;
+    color: #555;
+    line-height: 1.5;
+}
+
+.generation-item h5 {
+    font-size: 1.1rem;
+    margin: 15px 0 10px;
+    color: var(--primary-color);
+}
+
+/* Inspiration Message */
+.inspiration-message {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.inspiration-message .icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #e74c3c; /* Red color for the flower icon */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .result-card {
+        flex: 1 1 100%;
+    }
+    
+    .celebrities-container, .generation-container {
+        flex: 1 1 100%;
+    }
+    
+    .calculator-container, .results-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0 10px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .calculator-container, .results-container {
+        padding: 15px;
+    }
+}

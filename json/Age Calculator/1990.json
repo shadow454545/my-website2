@@ -1,0 +1,65 @@
+{
+  "celebrities": [
+    {
+      "name": "Emma Watson",
+      "profession": "Actress",
+      "birthdate": "1990-04-15",
+      "country": "United Kingdom",
+      "knownFor": "Harry Potter series"
+    },
+    {
+      "name": "Margot Robbie",
+      "profession": "Actress",
+      "birthdate": "1990-07-02",
+      "country": "Australia",
+      "knownFor": "The Wolf of Wall Street, Suicide Squad"
+    },
+    {
+      "name": "Jennifer Lawrence",
+      "profession": "Actress",
+      "birthdate": "1990-08-15",
+      "country": "United States",
+      "knownFor": "The Hunger Games, Silver Linings Playbook"
+    },
+    {
+      "name": "Kristen Stewart",
+      "profession": "Actress",
+      "birthdate": "1990-04-09",
+      "country": "United States",
+      "knownFor": "Twilight Saga, Spencer"
+    }
+  ],
+  
+  "generation": {
+    "name": "Millennials",
+    "startYear": 1981,
+    "endYear": 1996,
+    "description": "Came of age during the internet explosion and experienced significant economic challenges.",
+    "defining_events": [
+      {
+        "event": "9/11 Terror Attacks",
+        "year": 2001,
+        "icon": "🗽",
+        "details": "On September 11, 2001, terrorist attacks in the United States led to the destruction of the Twin Towers in New York City. This event deeply affected global security policies and led to the War on Terror."
+      },
+      {
+        "event": "Rise of the Internet",
+        "year": "1990s-2000s",
+        "icon": "🌐",
+        "details": "The 1990s and early 2000s saw the rapid expansion of the internet, with the rise of Google, social media platforms, and online communities. Millennials were the first generation to grow up with internet access at home and school."
+      },
+      {
+        "event": "2008 Financial Crisis",
+        "year": 2008,
+        "icon": "💰",
+        "details": "A global financial crisis caused by risky banking practices led to mass unemployment, housing foreclosures, and an economic downturn. Many Millennials were just entering the workforce during this time."
+      },
+      {
+        "event": "War on Terror",
+        "year": "2001 - Present",
+        "icon": "⚔️",
+        "details": "After the 9/11 attacks, the United States and its allies launched military operations in Afghanistan and Iraq. This shaped foreign policies and increased global conflict awareness."
+      }
+    ]
+  }
+}
