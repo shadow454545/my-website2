@@ -35,6 +35,43 @@ header {
     padding: 40px 0 20px;
 }
 
+/* Navigation Styles */
+.main-nav {
+    margin: 20px 0;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li {
+    margin: 0 10px;
+}
+
+.main-nav a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+}
+
+.main-nav li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -65,13 +102,21 @@ h3 {
     margin-bottom: 20px;
 }
 
+.input-hint {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
 }
 
-input[type="date"] {
+input[type="date"],
+input[type="number"] {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
@@ -234,6 +279,67 @@ footer {
     text-align: center;
     padding: 30px 0;
     border-top: 1px solid #eee;
+}
+
+/* Zodiac Calculator Styles */
+.compatibility-info, .lucky-elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.compatibility-item, .lucky-item {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 250px;
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.compatibility-item h4, .lucky-item h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.zodiac-sign-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: var(--border-radius);
+}
+
+.zodiac-sign-icon {
+    font-size: 1.8rem;
+    margin-right: 15px;
+}
+
+.zodiac-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.zodiac-fortune, .zodiac-history {
+    flex: 1 1 calc(50% - 15px);
+    min-width: 300px;
+}
+
+.fortune-item, .history-item {
+    background-color: var(--light-bg);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.fortune-item h4, .history-item h4 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
 /* Responsive Adjustments */

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chinese zodiac calculator: Find your zodiac sign, compatibility, and fortune.">
+    <title>Zodiac Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Zodiac Calculator</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Age Calculator</a></li>
+                <li class="active"><a href="zodiac.html">Zodiac Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="calculator-container">
+            <form id="zodiac-form">
+                <div class="input-group">
+                    <label for="birth-year">Enter Your Birth Year:</label>
+                    <input type="number" id="birth-year" name="birth-year" min="1900" max="2100" placeholder="YYYY" required>
+                    <p class="input-hint">Enter a year between 1900 and 2100</p>
+                </div>
+                <button type="submit" class="calculate-btn">Calculate Zodiac</button>
+            </form>
+        </section>
+        
+        <section class="results-container" id="zodiac-results">
+            <h2>Your Zodiac Results</h2>
+            
+            <div class="result-lines">
+                <div class="result-line">
+                    <span class="icon" id="zodiac-icon">🐀</span>
+                    <div>
+                        <h3>Your Chinese Zodiac Sign</h3>
+                        <p id="zodiac-sign">-</p>
+                    </div>
+                </div>
+                
+                <div class="result-line">
+                    
+                    <div>
+                        <h3><span class="icon">🌟</span>Your Element</h3>
+                        <p id="zodiac-element">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additional-info">
+                <div class="compatibility-container">
+                    <h3>Compatibility</h3>
+                    <div class="compatibility-info">
+                        <div class="compatibility-item">
+                            <h4>Most Compatible With</h4>
+                            <div id="most-compatible">
+                                <!-- Compatible zodiac signs will be loaded here -->
+                            </div>
+                        </div>
+                        <div class="compatibility-item">
+                            <h4>Least Compatible With</h4>
+                            <div id="least-compatible">
+                                <!-- Incompatible zodiac signs will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fortune-container">
+                    <h3>Lucky Elements</h3>
+                    <div class="lucky-elements">
+                        <div class="lucky-item">
+                            <h4>Lucky Numbers</h4>
+                            <p id="lucky-numbers">-</p>
+                        </div>
+                        <div class="lucky-item">
+                            <h4>Lucky Colors</h4>
+                            <p id="lucky-colors">-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="zodiac-details">
+                <div class="zodiac-fortune">
+                    <h3>Your Zodiac Fortune This Year</h3>
+                    <div id="zodiac-fortune">
+                        <!-- Zodiac fortune will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="zodiac-history">
+                    <h3>Historical Insights</h3>
+                    <div id="zodiac-history">
+                        <!-- Zodiac historical insights will be loaded here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inspiration-message">
+                <p><span class="icon">🌸</span> Your zodiac sign reveals your inner nature, but your choices shape your destiny.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Zodiac Calculator</p>
+    </footer>
+    
+    <script src="zodiac.js"></script>
+</body>
+</html>
