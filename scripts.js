@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 celebrityElement.className = 'celebrity-item';
                 
                 celebrityElement.innerHTML = `
-                    <h4>${"🎀"} ${celebrity.name}</h4>
+                    <h4>${"⭐"} ${celebrity.name}</h4>
                     <p><strong>Country:</strong> ${celebrity.country}</p>
                     <p><strong>Profession:</strong> ${celebrity.profession}</p>
                     <p><strong>Known for:</strong> ${celebrity.knownFor}</p>
