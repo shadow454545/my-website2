@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const luckyColorsElement = document.getElementById('lucky-colors');
     const zodiacFortuneElement = document.getElementById('zodiac-fortune');
     const zodiacHistoryElement = document.getElementById('zodiac-history');
+    const shareButton = document.getElementById('share-results');
     
     // Chinese Zodiac Data
     const zodiacSigns = [
@@ -160,6 +161,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Event Listeners
     zodiacForm.addEventListener('submit', handleFormSubmit);
+    if (shareButton) {
+        shareButton.addEventListener('click', shareResults);
+    }
     
     // Set default year to 2000 (Dragon year)
     birthYearInput.value = 2000;
@@ -399,5 +403,58 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         return traits[zodiacName] || "unique qualities";
+    }
+    
+    /**
+     * Share results on social media
+     */
+    function shareResults() {
+        // Check if results are available
+        if (resultsContainer.style.display !== 'block') {
+            alert('Please calculate your Chinese zodiac sign first');
+            return;
+        }
+        
+        const zodiacSign = zodiacSignElement.textContent;
+        const element = zodiacElementElement.textContent.split(' - ')[0];
+        const luckyNumbers = luckyNumbersElement.textContent;
+        
+        const shareText = `My Chinese zodiac sign is ${zodiacSign} with ${element} element. My lucky numbers are ${luckyNumbers}!`;
+        
+        // Check if Web Share API is available
+        if (navigator.share) {
+            navigator.share({
+                title: 'My Chinese Zodiac Sign',
+                text: shareText,
+                url: window.location.href
+            })
+            .catch(error => {
+                console.error('Error sharing:', error);
+                fallbackShare(shareText);
+            });
+        } else {
+            fallbackShare(shareText);
+        }
+    }
+    
+    /**
+     * Fallback sharing method
+     * @param {string} text - The text to share
+     */
+    function fallbackShare(text) {
+        // Create a temporary input element
+        const input = document.createElement('textarea');
+        input.value = text;
+        document.body.appendChild(input);
+        
+        // Select and copy the text
+        input.select();
+        document.execCommand('copy');
+        
+        // Remove the temporary element
+        document.body.removeChild(input);
+        
+        // Notify the user
+        alert('Share text copied to clipboard: ' + text);
     }
 });

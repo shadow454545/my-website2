@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Birthday countdown calculator: Find days until your birthday and your zodiac signs.">
+    <title>Birthday Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Birthday Countdown</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Age Calculator</a></li>
+                <li><a href="zodiac.html">Chinese Zodiac</a></li>
+                <li><a href="western-zodiac.html">Western Zodiac</a></li>
+                <li class="active"><a href="birthday-countdown.html">Birthday Countdown</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger-menu" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    
+    <main>
+        <section class="birthday-image-container">
+            <img src="birthday-cake.png" alt="Birthday Cake" class="birthday-cake-image">
+        </section>
+        
+        <section class="calculator-container">
+            <form id="birthday-form">
+                <div class="input-group">
+                    <label for="birthdate"><span class="icon">🎂</span> Enter Your Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                    <p class="input-hint">Enter your full birthdate to see your countdown</p>
+                </div>
+                <button type="submit" class="calculate-btn">Calculate Birthday Countdown</button>
+            </form>
+        </section>
+        
+        <section class="results-container gradient-bg" id="birthday-results">
+            <h2>Your Birthday Countdown</h2>
+            
+            <div class="result-lines">
+                <div class="result-line">
+                    <div>
+                        <h3>Your Zodiac Signs</h3>
+                        <p>
+                            <span class="icon" id="western-zodiac-icon">♈</span> Western: <span id="western-zodiac-sign">-</span>
+                            <br>
+                            <span class="icon" id="chinese-zodiac-icon">🐀</span> Chinese: <span id="chinese-zodiac-sign">-</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="result-line">
+                    <div>
+                        <h3><span class="icon">🎉</span> Birthday Countdown</h3>
+                        <p>Your birthday is in <span id="days-to-birthday" class="highlight-number">-</span> days.</p>
+                    </div>
+                </div>
+                
+                <div class="result-line">
+                    <div>
+                        <h3><span class="icon">🎈</span> Age Countdown</h3>
+                        <p>You will be <span id="next-age" class="highlight-number">-</span> years old in <span id="days-to-next-age" class="highlight-number">-</span> days.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inspiration-message">
+                <p><span class="icon">🌸</span> Wishing you happiness every day!</p>
+            </div>
+            
+            <div class="share-container">
+                <button class="share-btn" id="share-results">
+                    <i class="fas fa-share-alt"></i> Share Your Results
+                </button>
+            </div>
+        </section>
+    </main>
+    
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <footer>
+        <p>&copy; 2025 Birthday Countdown</p>
+    </footer>
+    
+    <script src="birthday-countdown.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

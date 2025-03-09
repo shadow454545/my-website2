@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Western zodiac calculator: Find your zodiac sign, compatibility, and career insights.">
+    <title>Western Zodiac Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Western Zodiac Calculator</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Age Calculator</a></li>
+                <li><a href="zodiac.html">Chinese Zodiac</a></li>
+                <li class="active"><a href="western-zodiac.html">Western Zodiac</a></li>
+                <li><a href="birthday-countdown.html">Birthday Countdown</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger-menu" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    
+    <main>
+        <section class="calculator-container">
+            <form id="western-zodiac-form">
+                <div class="input-group">
+                    <label for="birth-month">Enter Your Birth Month and Day:</label>
+                    <div class="date-input-container">
+                        <select id="birth-month" name="birth-month" required>
+                            <option value="" disabled selected>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select id="birth-day" name="birth-day" required>
+                            <option value="" disabled selected>Day</option>
+                            <!-- Days will be populated by JavaScript based on selected month -->
+                        </select>
+                    </div>
+                    <p class="input-hint">Select your birth month and day to find your Western zodiac sign</p>
+                </div>
+                <button type="submit" class="calculate-btn">Calculate Western Zodiac</button>
+            </form>
+        </section>
+        
+        <section class="results-container gradient-bg" id="western-zodiac-results">
+            <h2>Your Western Zodiac Results</h2>
+            
+            <div class="result-lines">
+                <div class="result-line">
+                    <span class="icon" id="western-zodiac-icon">♈</span>
+                    <div>
+                        <h3>Your Western Zodiac Sign</h3>
+                        <p id="western-zodiac-sign">-</p>
+                    </div>
+                </div>
+                
+                <div class="result-line">
+                    <span class="icon">🌟</span>
+                    <div>
+                        <h3>Your Zodiac Element</h3>
+                        <p id="western-zodiac-element">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additional-info">
+                <div class="compatibility-container">
+                    <h3>Compatibility</h3>
+                    <div class="compatibility-info">
+                        <div class="compatibility-item">
+                            <h4>Most Compatible With</h4>
+                            <div id="western-most-compatible">
+                                <!-- Compatible zodiac signs will be loaded here -->
+                            </div>
+                        </div>
+                        <div class="compatibility-item">
+                            <h4>Least Compatible With</h4>
+                            <div id="western-least-compatible">
+                                <!-- Incompatible zodiac signs will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="career-container">
+                    <h3>Career Insights</h3>
+                    <div class="career-info" id="career-insights">
+                        <!-- Career insights will be loaded here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lucky-elements-container">
+                <h3>Lucky Elements</h3>
+                <div class="lucky-elements">
+                    <div class="lucky-item">
+                        <h4>Lucky Numbers</h4>
+                        <p id="western-lucky-numbers">-</p>
+                    </div>
+                    <div class="lucky-item">
+                        <h4>Lucky Colors</h4>
+                        <p id="western-lucky-colors">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inspiration-message">
+                <p><span class="icon">🌸</span> The stars may guide your path, but you choose your destination.</p>
+            </div>
+            
+            <div class="share-container">
+                <button class="share-btn" id="share-results">
+                    <i class="fas fa-share-alt"></i> Share Your Results
+                </button>
+            </div>
+        </section>
+    </main>
+    
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <footer>
+        <p>&copy; 2025 Zodiac Calculator</p>
+    </footer>
+    
+    <script src="western-zodiac.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

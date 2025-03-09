@@ -11,13 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const remainingLifetime100Element = document.getElementById('remaining-lifetime-100');
     const remainingDays100Element = document.getElementById('remaining-days-100');
     const celebritiesList = document.getElementById('celebrities-list');
-    const generationInfo = document.getElementById('generation-info');   
+    const generationInfo = document.getElementById('generation-info');
+    const shareButton = document.getElementById('share-results');
+    
     // Constants
     const LIFESPAN_80 = 80; // 80 years lifespan
     const LIFESPAN_100 = 100; // 100 years lifespan
     
     // Event Listeners
     ageForm.addEventListener('submit', handleFormSubmit);
+    if (shareButton) {
+        shareButton.addEventListener('click', shareResults);
+    }
     
     // Set max date to today
     const today = new Date();
@@ -248,5 +253,58 @@ document.addEventListener('DOMContentLoaded', () => {
         const month = String(date.getMonth() + 1).padStart(2, '0');
         const day = String(date.getDate()).padStart(2, '0');
         return `${year}-${month}-${day}`;
+    }
+    
+    /**
+     * Share results on social media
+     */
+    function shareResults() {
+        // Check if results are available
+        if (resultsContainer.style.display !== 'block') {
+            alert('Please calculate your age first');
+            return;
+        }
+        
+        const age = todayAgeElement.textContent;
+        const daysLived = daysLivedElement.textContent;
+        const hoursLived = hoursLivedElement.textContent;
+        
+        const shareText = `${age} I have lived for ${daysLived} days and ${hoursLived} hours!`;
+        
+        // Check if Web Share API is available
+        if (navigator.share) {
+            navigator.share({
+                title: 'My Age Calculation',
+                text: shareText,
+                url: window.location.href
+            })
+            .catch(error => {
+                console.error('Error sharing:', error);
+                fallbackShare(shareText);
+            });
+        } else {
+            fallbackShare(shareText);
+        }
+    }
+    
+    /**
+     * Fallback sharing method
+     * @param {string} text - The text to share
+     */
+    function fallbackShare(text) {
+        // Create a temporary input element
+        const input = document.createElement('textarea');
+        input.value = text;
+        document.body.appendChild(input);
+        
+        // Select and copy the text
+        input.select();
+        document.execCommand('copy');
+        
+        // Remove the temporary element
+        document.body.removeChild(input);
+        
+        // Notify the user
+        alert('Share text copied to clipboard: ' + text);
     }
 });

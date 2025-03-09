@@ -6,16 +6,24 @@
     <meta name="description" content="Online age calculator: Quickly check your age and find same-age celebrities.">
     <title>Age Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Age Calculator</h1>
+        <div class="logo-container">
+            <h1>Age Calculator</h1>
+        </div>
         <nav class="main-nav">
             <ul>
                 <li class="active"><a href="index.html">Age Calculator</a></li>
-                <li><a href="zodiac.html">Zodiac Calculator</a></li>
+                <li><a href="zodiac.html">Chinese Zodiac</a></li>
+                <li><a href="western-zodiac.html">Western Zodiac</a></li>
+                <li><a href="birthday-countdown.html">Birthday Countdown</a></li>
             </ul>
         </nav>
+        <button class="hamburger-menu" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
     
     <main>
@@ -57,13 +65,24 @@
             <div class="inspiration-message">
                 <p><span class="icon">🌸</span> For every day you live, you have one less day in your life. Cherish the present.</p>
             </div>
+            
+            <div class="share-container">
+                <button class="share-btn" id="share-results">
+                    <i class="fas fa-share-alt"></i> Share Your Results
+                </button>
+            </div>
         </section>
     </main>
+    
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     
     <footer>
         <p>&copy; 2025 Age Calculator</p>
     </footer>
     
     <script src="scripts.js"></script>
+    <script src="common.js"></script>
 </body>
 </html>
